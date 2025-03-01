@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  devops-nginx:
+    container_name: mynginx
+    ports:
+      - 8080:80
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./html:/usr/share/nginx/html
+    networks:
+      - devops-network
+
+networks:
+  devops-network:
+    driver: bridge
