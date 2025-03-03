@@ -36,7 +36,7 @@ RUN pip install psycopg2-binary==2.9.3
 
 ENV PORT=5000
 ENV DB_PORT=5432
-ENV DB_HOST=localhost
+ENV DB_HOST=postgres
 ENV DB_NAME=nutritracker
 ENV DB_USER=postgres
 ENV DB_PASSWORD=postgres

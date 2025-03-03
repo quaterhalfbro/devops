@@ -12,6 +12,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=nutritracker
+      - POSTGRES_PORT=5432
     volumes:
       - ./containers/postgres:/data
     restart: unless-stopped
