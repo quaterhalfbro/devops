@@ -7,5 +7,5 @@ RUN mkdir /var/run/nginx && chown appuser:appgroup /var/run/nginx
 
 USER appuser
 
-COPY ./configuration /etc/nginx
+COPY configuration /etc/nginx
 EXPOSE 80
