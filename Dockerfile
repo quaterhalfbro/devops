@@ -1,9 +1,11 @@
 FROM nginx:stable-alpine
 
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
-RUN chown -R appuser:appgroup /usr/share/nginx/html
-RUN chown -R appuser:appgroup /var/cache/nginx
-RUN mkdir /var/run/nginx && chown appuser:appgroup /var/run/nginx
+RUN addgroup -S appgroup && \
+adduser -S appuser -G appgroup && \
+chown -R appuser:appgroup /usr/share/nginx/html && \
+chown -R appuser:appgroup /var/cache/nginx && \
+mkdir /var/run/nginx && \
+chown appuser:appgroup /var/run/nginx
 
 USER appuser
 
